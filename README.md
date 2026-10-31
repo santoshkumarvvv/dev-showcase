@@ -1,58 +1,84 @@
 <div align="center">
+  <img src="./assets/hero-banner.svg" alt="Dev Showcase — Clean Architecture & Automated CI/CD Blueprint" width="100%" />
+</div>
 
-```
-██████╗ ███████╗██╗   ██╗    ███████╗██╗  ██╗ ██████╗ ██╗    ██╗ ██████╗ █████╗ ███████╗███████╗
-██╔══██╗██╔════╝██║   ██║    ██╔════╝██║  ██║██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝██╔════╝
-██║  ██║█████╗  ██║   ██║    ███████╗███████║██║   ██║██║ █╗ ██║██║     ███████║███████╗█████╗  
-██║  ██║██╔══╝  ╚██╗ ██╔╝    ╚════██║██╔══██║██║   ██║██║███╗██║██║     ██╔══██║╚════██║██╔══╝  
-██████╔╝███████╗ ╚████╔╝     ███████║██║  ██║╚██████╔╝╚███╔███╔╝╚██████╗██║  ██║███████║███████╗
-╚═════╝ ╚══════╝  ╚═══╝      ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝  ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝
-```
+<br />
 
-### Production-ready Flutter starter  
-Clean Architecture · Riverpod · CI/CD · Zero fluff
-
-[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3-0175C2?style=flat-square&logo=dart&logoColor=white)](https://dart.dev)
-[![CI](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-
+<div align="center">
+  <a href="https://github.com/santoshkumarvvv/dev-showcase/actions">
+    <img src="https://img.shields.io/badge/CI_PIPELINE-VERIFIED-2563EB?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Pipeline" />
+  </a>
+  &nbsp;
+  <a href="https://flutter.dev">
+    <img src="https://img.shields.io/badge/FLUTTER_3-MATERIAL_3-0F172A?style=for-the-badge&logo=flutter&logoColor=60A5FA" alt="Flutter 3" />
+  </a>
+  &nbsp;
+  <a href="https://dart.dev">
+    <img src="https://img.shields.io/badge/DART_3-STRICT_LINTS-0F172A?style=for-the-badge&logo=dart&logoColor=60A5FA" alt="Dart 3" />
+  </a>
+  &nbsp;
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/LICENSE-MIT-0F172A?style=for-the-badge" alt="MIT License" />
+  </a>
 </div>
 
 ---
 
-## Why this exists
+### 01 · Clean Architecture & Dependency Rule
 
-Most Flutter starters are either toy projects or over-engineered messes.  
-**dev-showcase** is the middle path: a battle-ready foundation that serious developers actually start from.
+<div align="center">
+  <img src="./assets/architecture-diagram.svg" alt="Dev Showcase Clean Architecture Layers" width="100%" />
+</div>
 
-Everything is intentional.
+**Dev Showcase (`dev-showcase`)** is a production-grade application engineering foundation built with **Dart 3** and **Flutter 3**. It enforces strict separation between **Presentation**, **Domain**, and **Data** layers alongside automated GitHub Actions verification workflows, deterministic unit tests, and an interactive web showcase (`index.html`).
 
-## Architecture
+---
+
+### 02 · Engineering Standards & Quality Gates
+
+| Architectural Layer | Responsibility | Verification Gate |
+| :--- | :--- | :--- |
+| **`lib/domain/`** | Pure Dart entities & repository contracts with zero framework dependencies | Deterministic unit tests (`test/example_test.dart`) |
+| **`lib/data/`** | DTO models, serialization, and concrete repository implementations | Strict schema & null-safety validation |
+| **`lib/presentation/`** | Adaptive Material 3 screens (`HomeScreen`) & theme orchestration | Widget tree & 120fps raster budget compliance |
+| **`.github/workflows/`** | Automated pull-request & push verification matrix | `flutter analyze` + `flutter test` |
+
+---
+
+### 03 · Repository Structure
 
 ```text
-lib/
-├── core/           # constants · theme · utils · failures
-├── data/           # data sources · models · repository implementations
-├── domain/         # entities · use cases · repository contracts
-├── presentation/   # screens · widgets · providers
-└── main.dart
+dev-showcase/
+├── .github/                  # CI/CD workflows, issue templates & PR checklists
+├── assets/
+│   ├── hero-banner.svg       # Vector hero banner & telemetry card
+│   └── architecture-diagram.svg # Clean Architecture dependency flow diagram
+├── docs/
+│   ├── architecture.md       # Deep-dive architectural specification
+│   └── roadmap.md            # Feature & infrastructure milestone tracker
+├── lib/
+│   ├── core/
+│   │   ├── constants/        # Application-wide immutable constants
+│   │   └── theme/            # Material 3 Light & Dark theme tokens
+│   ├── data/
+│   │   ├── models/           # Data transfer objects & JSON serializers
+│   │   └── repositories/     # Concrete repository implementations
+│   ├── domain/
+│   │   ├── entities/         # Core business domain entities
+│   │   └── repositories/     # Abstract repository boundary contracts
+│   ├── presentation/
+│   │   └── screens/home/     # Feature screens & UI components
+│   └── main.dart             # Application bootstrapper
+├── test/
+│   └── example_test.dart     # Automated unit & widget verification suite
+├── analysis_options.yaml     # Strict Dart 3 static analyzer rules
+├── index.html                # Interactive browser showcase preview
+└── pubspec.yaml              # Dart & Flutter package manifest
 ```
 
-Strict separation. No leaking. Testable by design.
+---
 
-## What’s included
-
-- **Clean Architecture** layers fully enforced
-- **Riverpod** for scalable, testable state
-- **Material 3** + light/dark theme system
-- **Unit + Widget test scaffolding**
-- **GitHub Actions** — analyze · test · build on every PR
-- **Issue & PR templates**
-- **Architecture docs + roadmap**
-- **Code of Conduct · Contributing · Security Policy**
-
-## Quick Start
+### 04 · Quickstart & Verification
 
 ```bash
 git clone https://github.com/santoshkumarvvv/dev-showcase.git
@@ -61,30 +87,15 @@ flutter pub get
 flutter run
 ```
 
-## Quality Gates
+Execute static analysis and unit test gates locally:
 
 ```bash
 flutter analyze
 flutter test
 ```
 
-## Roadmap
-
-- [ ] Offline-first with Hive / Isar
-- [ ] GoRouter + deep linking
-- [ ] Auth module (Firebase / Supabase)
-- [ ] Fastlane + store deployment pipelines
-- [ ] Live CI status badges
-
-## License
-
-MIT — use it, ship with it, improve it.
-
 ---
 
-<div align="center">
+### License
 
-**Built for developers who refuse to compromise.**  
-[github.com/santoshkumarvvv](https://github.com/santoshkumarvvv)
-
-</div>
+Released under the [MIT License](./LICENSE) · Engineered by **[Santosh Kumar (@santoshkumarvvv)](https://github.com/santoshkumarvvv)**.

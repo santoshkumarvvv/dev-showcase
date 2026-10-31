@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#050507" />
+      <stop offset="50%" stopColor="#0B132B" />
+      <stop offset="100%" stopColor="#07090E" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563EB" />
+      <stop offset="100%" stopColor="#60A5FA" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)" stroke="#1E293B" strokeWidth="2" />
+  <rect x="60" y="0" width="260" height="3" fill="url(#accent)" />
+  <text x="60" y="64" fill="#60A5FA" fontFamily="JetBrains Mono, monospace" fontSize="13" fontWeight="600" letterSpacing="2">
+    CLEAN ARCHITECTURE &amp; CI/CD BLUEPRINT · @SANTOSHKUMARVVV
+  </text>
+  <text x="60" y="128" fill="#F8FAFC" fontFamily="system-ui, -apple-system, sans-serif" fontSize="46" fontWeight="800">
+    Dev Showcase Foundation
+  </text>
+  <text x="60" y="172" fill="#94A3B8" fontFamily="system-ui, -apple-system, sans-serif" fontSize="18">
+    Strict Domain-Driven layers, Dart 3 / Flutter 3 native engine, and automated GitHub Actions quality gates.
+  </text>
+  <g transform="translate(60, 212)">
+    <rect width="185" height="44" rx="10" fill="#090D16" stroke="#1E293B" strokeWidth="1.5" />
+    <text x="16" y="18" fill="#64748B" fontFamily="JetBrains Mono, monospace" fontSize="10">ARCHITECTURE</text>
+    <text x="16" y="34" fill="#60A5FA" fontFamily="JetBrains Mono, monospace" fontSize="13" fontWeight="700">Domain · Data · UI</text>
+  </g>
+  <g transform="translate(261, 212)">
+    <rect width="185" height="44" rx="10" fill="#090D16" stroke="#1E293B" strokeWidth="1.5" />
+    <text x="16" y="18" fill="#64748B" fontFamily="JetBrains Mono, monospace" fontSize="10">FRAME BUDGET</text>
+    <text x="16" y="34" fill="#F8FAFC" fontFamily="JetBrains Mono, monospace" fontSize="13" fontWeight="700">&lt; 12 ms (120 fps)</text>
+  </g>
+  <g transform="translate(462, 212)">
+    <rect width="205" height="44" rx="10" fill="#090D16" stroke="#1E293B" strokeWidth="1.5" />
+    <text x="16" y="18" fill="#64748B" fontFamily="JetBrains Mono, monospace" fontSize="10">QUALITY GATES</text>
+    <text x="16" y="34" fill="#F8FAFC" fontFamily="JetBrains Mono, monospace" fontSize="13" fontWeight="700">Analyze · Test · Build</text>
+  </g>
+</svg>
