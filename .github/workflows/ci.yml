@@ -7,14 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  analyze:
+  analyze-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.x'
           channel: 'stable'
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
+      - name: Install Dependencies
+        run: flutter pub get
+      - name: Run Clean Architecture Tests
+        run: flutter test
