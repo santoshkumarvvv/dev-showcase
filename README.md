@@ -38,7 +38,7 @@
 
 | Architectural Layer | Responsibility | Verification Gate |
 | :--- | :--- | :--- |
-| **`lib/domain/`** | Pure Dart entities & repository contracts with zero framework dependencies | Deterministic unit tests (`test/example_test.dart`) |
+| **`lib/domain/`** | Pure Dart entities & repository contracts with zero framework dependencies | Deterministic unit tests (`test/telemetry_repository_test.dart`) |
 | **`lib/data/`** | DTO models, serialization, and concrete repository implementations | Strict schema & null-safety validation |
 | **`lib/presentation/`** | Adaptive Material 3 screens (`HomeScreen`) & theme orchestration | Widget tree & 120fps raster budget compliance |
 | **`.github/workflows/`** | Automated pull-request & push verification matrix | `flutter analyze` + `flutter test` |
